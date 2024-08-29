@@ -1,3 +1,4 @@
+![Project](https://api.hariskhandurrani.com/portal1.jpg)
 # Express.js Application with MySQL, Sessions, and OTP Authentication
 
 This project is an advanced Express.js application that integrates MySQL, session management, OTP-based authentication, file handling, and dynamic page rendering. The application is built to handle domain-specific configurations and communicate with external services via Socket.IO.
