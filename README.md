@@ -38,7 +38,7 @@ To set up the application locally, follow these steps:
 ```bash
 git clone https://github.com/your-repo-name.git
 cd your-repo-name
-
+```
 
 ## Usage
 
