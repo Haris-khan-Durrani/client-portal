@@ -1,0 +1,37 @@
+<%- include('partials/layout', 
+{ title: 'Setting', 
+body: `
+<h1>Tenant Settings</h1>
+<table class="min-w-full leading-normal">
+    <thead>
+        <tr>
+            <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                Client Name
+            </th>
+            <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                Domain
+            </th>
+            <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                Actions
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <% tenants.forEach(function(tenant) { %>
+            <tr>
+                <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                    <%= tenant.client_name %>
+                </td>
+                <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                    <%= tenant.domain %>
+                </td>
+                <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                    <a href="/settings/tenants/edit/<%= tenant.client_id %>" class="text-blue-600 hover:text-blue-900">Edit</a>
+                    <a href="/settings/tenants/delete/<%= tenant.client_id %>" class="text-red-600 hover:text-red-900 ml-4">Delete</a>
+                </td>
+            </tr>
+        <% }); %>
+    </tbody>
+</table>
+`
+}) %>

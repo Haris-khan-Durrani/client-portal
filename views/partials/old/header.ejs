@@ -1,0 +1,63 @@
+<nav class="bg-white dark:bg-slate-950 border-b border-gray-300">
+    <div class="flex justify-between items-center px-9">
+        <!-- Ícono de Menú -->
+        <button id="menu-button" class="lg:hidden">
+            <i class="fas fa-bars text-cyan-500 text-lg"></i>
+        </button>
+        <!-- Logo -->
+        <div class="ml-1">
+            <img src="<%= logo %>" alt="logo" class="h-15 w-28">
+        </div>
+
+        <!-- Ícono de Notificación y Perfil -->
+        <div class="space-x-4">
+            <button>
+                <i class="fas fa-bell text-cyan-500 text-lg"></i>
+            </button>
+
+            <!-- Botón de Perfil -->
+            <button>
+                <i class="fas fa-user text-cyan-500 text-lg"></i>
+            </button>
+        </div>
+    </div>
+</nav>
+
+<!-- Barra lateral -->
+<div id="sidebar" class="dark:bg-slate-950 dark:text-white  lg:block hidden bg-white w-64 h-screen fixed rounded-none border-none">
+    <!-- Items -->
+  
+    <div class="p-4 space-y-4">
+        <!-- Inicio -->
+        <a href="#" aria-label="dashboard" class="hidden dark:text-white md:block sm:block relative px-4 py-3 flex items-center space-x-4 rounded-lg text-white  from-sky-600 to-cyan-400">
+        <div class="ml-1 ">
+            <img src="<%= logo %>" alt="logo" class="h-15 w-28">
+        </div>
+    </a>
+        
+        <a href="/" class="px-4 py-3 flex dark:text-white items-center space-x-4 rounded-md text-gray-500 group">
+            <i class="fas fa-home"></i>
+            <span>Dashboard</span>
+        </a>
+
+
+        <a href="/settings" class="px-4 py-3 dark:text-white flex items-center space-x-4 rounded-md text-gray-500 group">
+            <i class="fas fa-cogs"></i>
+            <span>Settings</span>
+        </a>
+      
+    
+      
+        <a href="#" class="px-4 py-3 flex dark:text-white items-center space-x-4 rounded-md text-gray-500 group">
+        <i class="fas fa-sign-out-alt"></i>
+        <span>Log Out</span>
+    </a>
+
+<div class="bg-gray-500 w-20 mx-auto mt-10 cursor-pointer rounded-3xl toggler dark:bg-green-500">
+<div class="bg-white w-10 h-5 scale-75 rounded-3xl transition-transform dark:bg-black"></div>
+</div>
+
+
+    
+    </div>
+</div>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="<%- logo %>">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://app.crmsoftware.ae/css/output.css" type="text/css">
+    <script src="https://cdn.tailwindcss.com"></script>
+<%- emcod %>
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen" style="background: url(https://storage.googleapis.com/msgsndr/T73rxLwZ4VgfYPhSHe4N/media/66a7a59de455c5ec1cd5a133.jpeg); background-size: cover; background-repeat: no-repeat;">
+ 
+
+    <form action="/login" method="post" class="w-96 bg-white p-8 rounded shadow-md items-center">
+             <!-- Logo -->
+      <div class="ml-1 items-center text-center mb-2">
+        <img src="<%= logo %>" alt="logo" class="h-15 w-28 items-center text-center">
+    </div>
+       
+        <div class="mb-4">
+            <label for="username" class="block text-sm font-medium text-gray-700">Registered Email</label>
+            <input placeholder="Your Registered Email" type="text" name="username" id="username" class="mt-1 p-2 w-full border rounded-md">
+            <%= message %>
+        </div>
+  
+        <button type="submit" class="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            Log in
+        </button>
+    </form>
+</body>
+</html>

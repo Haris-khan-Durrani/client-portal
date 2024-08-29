@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="<%- logo %>">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP Verification</title>
+    <link rel="stylesheet" href="https://app.crmsoftware.ae/css/output.css" type="text/css">
+    <script src="https://cdn.tailwindcss.com"></script>
+<%- emcod %>
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen" style="background: url(https://storage.googleapis.com/msgsndr/T73rxLwZ4VgfYPhSHe4N/media/66a7a59de455c5ec1cd5a133.jpeg); background-size: cover; background-repeat: no-repeat;">
+ 
+
+    <form action="/verifyOTP" method="post" class="w-96 bg-white p-8 rounded shadow-md">
+             <!-- Logo -->
+      <div class="ml-1">
+        <img src="<%= logo %>" alt="logo" class="h-15 w-28">
+    </div>
+        <h1 class="mt-5 text-xl font-bold mb-4">Input Your OTP</h1>
+ 
+        <div class="mb-6">
+          <input type="hidden" name="username" value="<%= username %>">
+                    <input type="hidden" name="namo" value="<%= namo %>">
+            <label for="password" class="block text-sm font-medium text-gray-700">OTP Please</label>
+            <input type="number" name="otp" id="otp" class="mt-1 p-2 w-full border rounded-md" required>
+        </div>
+        <button type="submit" class="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            Log in
+        </button>
+   
+      
+    </form>
+ 
+</body>
+</html>

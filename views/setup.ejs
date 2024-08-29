@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setup Domain</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-900">
+    <div class="min-h-screen flex items-center justify-center">
+        <div class="bg-white p-8 rounded-lg shadow-lg m-2 w-full">
+            <h1 class="text-2xl font-bold mb-6 text-center">Setup Domain Configuration</h1>
+            <form action="/setup" method="post" class="grid grid-cols-2 gap-2">
+                <div class="mb-4">
+                    <label for="domain" class="block text-sm font-medium text-gray-700">Domain:</label>
+                    <input type="text" id="domain" name="domain" required class="mt-1 p-2 block w-full shadow-sm sm:text-sm border border-gray-300 rounded-md">
+                </div>
+                <div class="mb-4">
+                    <label for="location_id" class="block text-sm font-medium text-gray-700">Location ID:</label>
+                    <input type="text" id="location_id" name="location_id" class="mt-1 p-2 block w-full shadow-sm sm:text-sm border border-gray-300 rounded-md">
+                </div>
+                <div class="mb-4">
+                    <label for="v_location_id" class="block text-sm font-medium text-gray-700">V Location ID:</label>
+                    <input type="text" id="v_location_id" name="v_location_id" class="mt-1 p-2 block w-full shadow-sm sm:text-sm border border-gray-300 rounded-md">
+                </div>
+                <div class="mb-4">
+                    <label for="logo_url" class="block text-sm font-medium text-gray-700">Logo URL:</label>
+                    <input type="text" id="logo_url" name="logo_url" class="mt-1 p-2 block w-full shadow-sm sm:text-sm border border-gray-300 rounded-md">
+                </div>
+                <div class="mb-4">
+                    <label for="background" class="block text-sm font-medium text-gray-700">Background:</label>
+                    <input type="text" id="background" name="background" class="mt-1 p-2 block w-full shadow-sm sm:text-sm border border-gray-300 rounded-md">
+                </div>
+                <div class="mb-4">
+                    <label for="dark_back" class="block text-sm font-medium text-gray-700">Dark Back:</label>
+                    <input type="text" id="dark_back" name="dark_back" class="mt-1 p-2 block w-full shadow-sm sm:text-sm border border-gray-300 rounded-md">
+                </div>
+                <div class="mb-4">
+                    <label for="side_dark_back" class="block text-sm font-medium text-gray-700">Side Dark Back:</label>
+                    <input type="text" id="side_dark_back" name="side_dark_back" class="mt-1 p-2 block w-full shadow-sm sm:text-sm border border-gray-300 rounded-md">
+                </div>
+                <div class="mb-4">
+                    <label for="side_back" class="block text-sm font-medium text-gray-700">Side Back:</label>
+                    <input type="text" id="side_back" name="side_back" class="mt-1 p-2 block w-full shadow-sm sm:text-sm border border-gray-300 rounded-md">
+                </div>
+                <div class="mb-4">
+                    <label for="grid_back" class="block text-sm font-medium text-gray-700">Grid Back:</label>
+                    <input type="text" id="grid_back" name="grid_back" class="mt-1 p-2 block w-full shadow-sm sm:text-sm border border-gray-300 rounded-md">
+                </div>
+                <div class="mb-4">
+                    <label for="dark_grid_back" class="block text-sm font-medium text-gray-700">Dark Grid Back:</label>
+                    <input type="text" id="dark_grid_back" name="dark_grid_back" class="mt-1 p-2 block w-full shadow-sm sm:text-sm border border-gray-300 rounded-md">
+                </div>
+                <div class="mb-4">
+                    <label for="text_light" class="block text-sm font-medium text-gray-700">Text Light:</label>
+                    <input type="text" id="text_light" name="text_light" class="mt-1 p-2 block w-full shadow-sm sm:text-sm border border-gray-300 rounded-md">
+                </div>
+                <div class="mb-4">
+                    <label for="text_dark" class="block text-sm font-medium text-gray-700">Text Dark:</label>
+                    <input type="text" id="text_dark" name="text_dark" class="mt-1 p-2 block w-full shadow-sm sm:text-sm border border-gray-300 rounded-md">
+                </div>
+                <div class="mb-4">
+                    <label for="icon_button_back" class="block text-sm font-medium text-gray-700">Icon Button Back:</label>
+                    <input type="text" id="icon_button_back" name="icon_button_back" class="mt-1 p-2 block w-full shadow-sm sm:text-sm border border-gray-300 rounded-md">
+                </div>
+                <div class="mb-4">
+                    <label for="button_bottom_border" class="block text-sm font-medium text-gray-700">Button Bottom Border:</label>
+                    <input type="text" id="button_bottom_border" name="button_bottom_border" class="mt-1 p-2 block w-full shadow-sm sm:text-sm border border-gray-300 rounded-md">
+                </div>
+                <div class="mb-4">
+                    <label for="company_name" class="block text-sm font-medium text-gray-700">Company Name:</label>
+                    <input type="text" id="company_name" name="company_name" class="mt-1 p-2 block w-full shadow-sm sm:text-sm border border-gray-300 rounded-md">
+                </div>
+                <div class="mb-4">
+                    <label for="company_address" class="block text-sm font-medium text-gray-700">Company Address:</label>
+                    <input type="text" id="company_address" name="company_address" class="mt-1 p-2 block w-full shadow-sm sm:text-sm border border-gray-300 rounded-md">
+                </div>
+                <div class="mb-4">
+                    <label for="heading_color" class="block text-sm font-medium text-gray-700">Heading Color:</label>
+                    <input type="text" id="heading_color" name="heading_color" class="mt-1 p-2 block w-full shadow-sm sm:text-sm border border-gray-300 rounded-md">
+                </div>
+                <button type="submit" class="w-full py-2 px-4 bg-blue-600 text-white font-semibold rounded-md shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-75 transition duration-150">Save Configuration</button>
+            </form>
+            
+            
+            
+        </div>
+    </div>
+</body>
+</html>

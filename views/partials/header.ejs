@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+   
+ <link rel="icon" type="image/x-icon" href="<%- logo %>">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  
+
+     <!-- Tailwind Config -->
+     <script>
+        tailwind.config = {
+          darkMode: 'class',
+        };
+      </script>
+      <style>
+      .custom-swal-container .swal2-popup{
+       width:850px !important;
+      }
+      
+      @media only screen and (max-width: 768px) {
+  nav {
+  position:fixed;
+  width:100% !important;
+  z-index:1
+  }
+  nav img{
+        height: 55px;
+        width: auto !important;
+  }
+  #sidebar{
+  z-index:2
+  }
+  
+  
+  .yacode{
+  padding-top:60px
+  }
+  .wallahframe{
+  padding-top:70px
+  }
+}
+      
+      </style>
+<%- emcod %>
+</head>
+
+<body class="dark:<%= darkback %> transition-colors <%= background %> lg:flex" style="background-image: url(https://storage.googleapis.com/msgsndr/N2WFjzprq6BuyzRjJzNl/media/663c9b1902dbb081c3d7cd77.svg);
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;">
+    
+    
+    
+    <nav class="<%= sideback %> dark:<%= sidedark %> border-b border-gray-300 p-2 ">
+        <div class="flex justify-between items-center px-9">
+            <!-- Ícono de Menú -->
+          
+            
+               <button style="display:none">
+                    <i class="fas fa-bell text-white-500 text-lg"></i>
+                </button>
+            <!-- Logo -->
+            <div class="ml-1">
+                <a href="/"><img src="<%= logo %>" alt="logo" class="dlogo h-15 w-28"></a>
+            </div>
+
+            <!-- Ícono de Notificación y Perfil -->
+            <div class="space-x-4">
+           <!-- Botón de Perfil -->
+                <button style="display:none">
+                    <i class="fas fa-user text-white-500 text-lg"></i>
+                </button> 
+                
+  <button id="menu-button" class="lg:hidden">
+                <i class="fas fa-bars text-white-500 text-lg"></i>
+            </button>
+             
+            </div>
+        </div>
+    </nav>
+
+    <!-- Barra lateral -->
+    <div id="sidebar" class="dark:<%= sidedark %>  dark:text-white  lg:block hidden <%= sideback %> w-64 h-screen fixed overflow-auto rounded-none border-none">
+        <!-- Items -->
+      
+        <div class="p-4 space-y-4" style="background:url(https://storage.googleapis.com/msgsndr/CaUsaDHBNHw2z2ThM8DV/media/66617c6b6cee2b2a295c8e83.png);background-size:contain">
+            <!-- Inicio -->
+            <a href="/" aria-label="dashboard" class="dark:text-white md:block sm:block relative px-4 py-3 flex items-center space-x-4 rounded-lg text-white  from-sky-600 to-cyan-400">
+            <div class="ml-1 ">
+                <img src="<%= logo %>" alt="logo" class="dlogo h-15 w-28">
+            </div>
+        </a>
+            
+            <a href="/" class="menlink px-4 py-3 flex dark:text-white items-center space-x-4 rounded-md text-gray-500 group">
+                <i class="fas fa-home"></i>
+                <span>Dashboard</span>
+            </a>
+          
+
+          
+        <%- sidy %>
+          
+            <a href="/logout" class="px-4 py-3 flex bg-red-700 text-white dark:text-white-900 items-center space-x-4 rounded-md group">
+            <i class="fas fa-power-off"></i>
+            <span>Log Out</span>
+        </a>
+
+
+<div class="bg-gray-500 w-20 mx-auto mt-1 cursor-pointer rounded-3xl toggler dark:bg-green-500">
+    <div class="bg-white w-10 h-15 scale-75 rounded-3xl transition-transform dark:bg-black">
+    <svg width="24" height="24" fill="yenonellow" aria-hidden="true" class="transform transition-transform scale-5 duration-500"><path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M12 4v1M18 6l-1 1M20 12h-1M18 18l-1-1M12 19v1M7 17l-1 1M5 12H4M7 7 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+    </div>
+</div>
+<div class="w-40 mx-auto mt-1 text-center">
+Powered By
+<img src="https://netxsites.com/wp-content/uploads/2023/12/netxsite-logo-landscape.svg" >
+
+</div>
+        
+        </div>
+        
+
+
+
+
+
+
+    </div>
+
+    <div class="lg:w-full lg:ml-16 md:ml-16  <%= title %> yacode" >
+  
+    

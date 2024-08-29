@@ -1,0 +1,111 @@
+<%- include('partials/layout', 
+{ title: 'Setting', 
+body: `
+ <div class="bg-white p-6 rounded-lg shadow-md">
+           
+            
+            <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.1/dist/alpine.min.js" defer></script>
+
+
+<div class="${butico} rounded flex w-full justify-center items-center p-1 h-full h-screen">
+  <div x-data="{ tab: 'page' }" class="w-full">
+    <div 
+      class="flex -mx-px"
+    >
+      
+      <button
+        @click="tab = 'page'"
+        :class="{ 'bg-white border-white': tab === 'page' }"
+        class="bg-transparent  text-white text-sm md:text-base font-semibold rounded-t focus:outline-none mx-px py-px md:py-2 px-3 md:px-4"
+        type="button"
+      >
+        Page Setup
+      </button>
+      
+      <button
+        @click="tab = 'transfer'"
+        :class="{ 'bg-white border-white': tab === 'transfer' }"
+        class="bg-transparent  text-white font-semibold rounded-t focus:outline-none mx-px py-2 px-4"
+        type="button"
+      >
+        Domain Setup
+      </button>
+      
+      <button
+        @click="tab = 'other'"
+        :class="{ 'bg-white border-white': tab === 'other' }"
+        class="bg-transparent text-white text-sm md:text-base font-semibold rounded-t focus:outline-none mx-px py-px md:py-2 px-3 md:px-4"
+        type="button"
+      >
+        Email Template Setup
+      </button>
+      
+      
+    </div>
+    <ul class="bg-white text-sm rounded-b">
+      
+      <li x-show="tab === 'page'" class="p-4">
+   
+          ${addform}
+          
+          <br>
+            <hr>
+                <h2 class="text-2xl font-semibold mb-4 dark:text-gray-700">All Pages</h2>
+                ${allout}
+            
+      </li>
+       
+       
+       
+       
+        
+      <li x-show="tab === 'transfer'" class="dark:text-gray-700 p-4">
+      <iframe   width="100%" height="100%" 
+               class="w-full aspect-video" src="/domain-setup" 
+                   id="iFrame1" style="min-height: 1600px" ></iframe> 
+      </li>
+       
+       
+       
+       
+       
+        
+      <li x-show="tab === 'other'" class="dark:text-gray-700">
+       <div class="relative h-screen w-full flex items-center justify-center bg-cover bg-center text-center px-5"
+    style="background-image:url(https://images.pexels.com/photos/260689/pexels-photo-260689.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=1&amp;w=500);">
+    <div class="absolute top-0 right-0 bottom-0 left-0 bg-gray-900 opacity-75"></div>
+
+    <div class="z-50 flex flex-col justify-center text-white w-full h-screen">
+        <h1 class="text-5xl">We are <b>Almost</b> there!</h1>
+        <p>Stay tuned for something amazing!!!</p>
+
+        <div class="mt-10 mb-5">
+            <div class="shadow w-full bg-white mt-2 max-w-2xl mx-auto rounded-full">
+                <div class="rounded-full bg-indigo-600 text-xs leading-none text-center text-white py-1"
+                    style="width: 85%">85%</div>
+            </div>
+        </div>
+
+        <div class="mt-6 flex text-white mx-auto">
+       
+        </div>
+
+
+    </div>
+
+</div>
+      </li>
+        
+    </ul>
+  </div>
+</div>
+
+
+        </div>
+
+
+
+`
+
+
+}) %>

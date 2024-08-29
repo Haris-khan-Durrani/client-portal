@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Domain Configuration</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-900">
+    <div class="min-h-screen flex">
+        <div class="bg-white p-8 rounded-lg shadow-lg w-full">
+            <h1 class="text-2xl font-bold mb-6 text-center">Edit Domain Configuration <a href="/domain-setup" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Back To Add Domain</a></h1>
+          <form action="/setup_endpoint_edit" method="post" class="grid grid-cols-2 gap-2">
+    <input type="hidden" name="id" value="<%= config.id %>">
+    <div class="mb-4">
+        <label for="domain" class="block text-sm font-medium text-gray-700">Domain:</label>
+        <input type="text" id="domain" name="domain" value="<%= config.domain %>" required class="mt-1 p-2 block w-full shadow-sm sm:text-sm border border-gray-300 rounded-md">
+    </div>
+    <div class="mb-4">
+        <label for="location_id" class="block text-sm font-medium text-gray-700">Location ID:</label>
+        <input type="text" id="location_id" name="location_id" value="<%= config.location_id %>" class="mt-1 p-2 block w-full shadow-sm sm:text-sm border border-gray-300 rounded-md">
+    </div>
+    <div class="mb-4">
+        <label for="v_location_id" class="block text-sm font-medium text-gray-700">V Location ID:</label>
+        <input type="text" id="v_location_id" name="v_location_id" value="<%= config.v_location_id %>" class="mt-1 p-2 block w-full shadow-sm sm:text-sm border border-gray-300 rounded-md">
+    </div>
+    <div class="mb-4">
+        <label for="logo_url" class="block text-sm font-medium text-gray-700">Logo URL:</label>
+        <input type="text" id="logo_url" name="logo_url" value="<%= config.logo_url %>" class="mt-1 p-2 block w-full shadow-sm sm:text-sm border border-gray-300 rounded-md">
+    </div>
+    <div class="mb-4">
+        <label for="background" class="block text-sm font-medium text-gray-700">Background:</label>
+        <input type="text" id="background" name="background" value="<%= config.background %>" class="mt-1 p-2 block w-full shadow-sm sm:text-sm border border-gray-300 rounded-md">
+    </div>
+    <div class="mb-4">
+        <label for="dark_back" class="block text-sm font-medium text-gray-700">Dark Back:</label>
+        <input type="text" id="dark_back" name="dark_back" value="<%= config.dark_back %>" class="mt-1 p-2 block w-full shadow-sm sm:text-sm border border-gray-300 rounded-md">
+    </div>
+    <div class="mb-4">
+        <label for="side_dark_back" class="block text-sm font-medium text-gray-700">Side Dark Back:</label>
+        <input type="text" id="side_dark_back" name="side_dark_back" value="<%= config.side_dark_back %>" class="mt-1 p-2 block w-full shadow-sm sm:text-sm border border-gray-300 rounded-md">
+    </div>
+    <div class="mb-4">
+        <label for="side_back" class="block text-sm font-medium text-gray-700">Side Back:</label>
+        <input type="text" id="side_back" name="side_back" value="<%= config.side_back %>" class="mt-1 p-2 block w-full shadow-sm sm:text-sm border border-gray-300 rounded-md">
+    </div>
+    <div class="mb-4">
+        <label for="grid_back" class="block text-sm font-medium text-gray-700">Grid Back:</label>
+        <input type="text" id="grid_back" name="grid_back" value="<%= config.grid_back %>" class="mt-1 p-2 block w-full shadow-sm sm:text-sm border border-gray-300 rounded-md">
+    </div>
+    <div class="mb-4">
+        <label for="dark_grid_back" class="block text-sm font-medium text-gray-700">Dark Grid Back:</label>
+        <input type="text" id="dark_grid_back" name="dark_grid_back" value="<%= config.dark_grid_back %>" class="mt-1 p-2 block w-full shadow-sm sm:text-sm border border-gray-300 rounded-md">
+    </div>
+    <div class="mb-4">
+        <label for="text_light" class="block text-sm font-medium text-gray-700">Text Light:</label>
+        <input type="text" id="text_light" name="text_light" value="<%= config.text_light %>" class="mt-1 p-2 block w-full shadow-sm sm:text-sm border border-gray-300 rounded-md">
+    </div>
+    <div class="mb-4">
+        <label for="text_dark" class="block text-sm font-medium text-gray-700">Text Dark:</label>
+        <input type="text" id="text_dark" name="text_dark" value="<%= config.text_dark %>" class="mt-1 p-2 block w-full shadow-sm sm:text-sm border border-gray-300 rounded-md">
+    </div>
+    <div class="mb-4">
+        <label for="icon_button_back" class="block text-sm font-medium text-gray-700">Icon Button Back:</label>
+        <input type="text" id="icon_button_back" name="icon_button_back" value="<%= config.icon_button_back %>" class="mt-1 p-2 block w-full shadow-sm sm:text-sm border border-gray-300 rounded-md">
+    </div>
+    <div class="mb-4">
+        <label for="button_bottom_border" class="block text-sm font-medium text-gray-700">Button Bottom Border:</label>
+        <input type="text" id="button_bottom_border" name="button_bottom_border" value="<%= config.button_bottom_border %>" class="mt-1 p-2 block w-full shadow-sm sm:text-sm border border-gray-300 rounded-md">
+    </div>
+    <div class="mb-4">
+        <label for="company_name" class="block text-sm font-medium text-gray-700">Company Name:</label>
+        <input type="text" id="company_name" name="company_name" value="<%= config.company_name %>" class="mt-1 p-2 block w-full shadow-sm sm:text-sm border border-gray-300 rounded-md">
+    </div>
+    <div class="mb-4">
+        <label for="company_address" class="block text-sm font-medium text-gray-700">Company Address:</label>
+        <input type="text" id="company_address" name="company_address" value="<%= config.company_address %>" class="mt-1 p-2 block w-full shadow-sm sm:text-sm border border-gray-300 rounded-md">
+    </div>
+    <div class="mb-4">
+        <label for="heading_color" class="block text-sm font-medium text-gray-700">Heading Color:</label>
+        <input type="text" id="heading_color" name="heading_color" value="<%= config.heading_color %>" class="mt-1 p-2 block w-full shadow-sm sm:text-sm border border-gray-300 rounded-md">
+    </div>
+        <div class="mb-4">
+                    <label for="heading_color" class="block text-sm font-medium text-gray-700">Embed Code</label>
+                    <textarea name="emcode" class="mt-1 p-2 block w-full shadow-sm sm:text-sm border border-gray-300 rounded-md">
+                    <%= config.emcode %>
+                    </textarea>
+                    
+                </div>
+                
+                        
+                <div class="mb-4">
+                    <label for="heading_color" class="block text-sm font-medium text-gray-700">Company File View (This settig will handle front files view)</label>
+                    <textarea name="cfv" class="mt-1 p-2 block w-full shadow-sm sm:text-sm border border-gray-300 rounded-md">
+                    <%= config.cfv %>
+                    </textarea>
+                    
+                </div>
+                          
+                <div class="mb-4">
+                    <label for="heading_color" class="block text-sm font-medium text-gray-700">Company visa File View (This settig will handle visas front files view)</label>
+                    <textarea name="cvv" class="mt-1 p-2 block w-full shadow-sm sm:text-sm border border-gray-300 rounded-md">
+                    <%= config.cvv %>
+                    </textarea>
+                    
+                </div>
+    <button type="submit" class="w-full py-2 px-4 bg-blue-600 text-white font-semibold rounded-md shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-75 transition duration-150">Update Configuration</button>
+</form>
+
+        </div>
+    </div>
+</body>
+</html>

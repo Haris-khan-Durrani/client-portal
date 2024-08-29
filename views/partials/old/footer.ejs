@@ -1,0 +1,54 @@
+
+
+<script>
+  
+    const setTheme = () => {
+        const html = document.documentElement;
+        const toggler = document.querySelector('.toggler');
+        if (localStorage.getItem('color-theme') === 'dark' || (!localStorage.getItem('color-theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            html.classList.add('dark');
+            toggler.classList.add('dark');
+            toggler.children[0].classList.add('translate-x-10');
+        } else {
+            html.classList.remove('dark');
+            toggler.classList.remove('dark');
+        }
+    };
+    
+    // Toggle Dark Function
+    const toggleDark = () => {
+        const html = document.documentElement;
+        const toggler = document.querySelector('.toggler');
+    
+        toggler.addEventListener('click', () => {
+            toggler.children[0].classList.toggle('translate-x-10');
+            html.classList.toggle('dark');
+            toggler.classList.toggle('dark');
+            if (html.classList.contains('dark')) {
+                localStorage.setItem('color-theme', 'dark');
+            } else {
+                localStorage.setItem('color-theme', 'light');
+            }
+        });
+    };
+    
+        setTheme();
+        toggleDark();
+    
+    
+        document.addEventListener('DOMContentLoaded', function() {
+            var menuButton = document.getElementById('menu-button');
+            var sidebar = document.getElementById('sidebar');
+    
+            menuButton.addEventListener('click', function() {
+                sidebar.classList.toggle('hidden');
+                sidebar.classList.toggle('lg:block');
+            });
+        });
+    </script>
+    <style>
+        .dark{
+            /* background-color: black; */
+            color:white
+        }
+    </style>

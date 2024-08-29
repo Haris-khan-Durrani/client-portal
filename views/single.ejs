@@ -1,0 +1,36 @@
+<%- include('partials/layout', 
+{ title: `${companyid} Visa File`, 
+body: `
+
+
+<section class="text-gray-600 body-font">
+  <div class="container sm-px-5 2xl-px-5 md-px-5 px-5 py-4 mx-auto">
+    <img src="https://storage.googleapis.com/msgsndr/gaLwORwdEGHxCHjEqZ1C/media/663e3444b47850505332fe97.jpeg" class="sm:block hidden w-full">
+    <h2 class="text-xs text-center text-indigo-500 tracking-widest font-medium title-font mb-2">Company Profile </h2>
+    <div class="flex flex-wrap  text-center w-full mb-2">
+   
+    <a href="/" class="${butico}  text-white text-sm p-1 justify-start  border rounded-full" style="height: 30px;width: 30px;padding-top: 6px;">
+ <img src="https://storage.googleapis.com/msgsndr/gaLwORwdEGHxCHjEqZ1C/media/66433cc673711a246b2b81ba.svg" >
+</a>
+      <h1 class="w-11/12 text-center sm:text-3xl text-2xl font-medium title-font text-gray-900 dark:text-white py-2">     
+       ${companyid} !</h1>    
+ 
+    </div>
+    <div class="flex flex-wrap w-full justify-center">
+   
+     ${contacts}
+     
+     
+     
+    
+    </div>
+    
+  </div>
+  
+</section>
+
+
+`
+
+
+}) %>
