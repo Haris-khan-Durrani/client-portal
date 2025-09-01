@@ -250,8 +250,8 @@ let otpMap = new Map();
 async function sendOTPEmailAndTriggerWebhook(username, otp,namo,phon) {
     //  await axios.get('https://app.crmsoftware.ae/api/message.php', {
     //         params: {
-    //             agent: '+971562559270',
-    //             client: '+971551745764',
+    //             agent: 'xxxxxxx',
+    //             client: 'xxxxxxxx',
     //             country: 'AE',
     //             message: 'Hi there, OTP email sent. OTP: ' + otp
     //         }
@@ -290,7 +290,7 @@ async function sendOTPEmailAndTriggerWebhook(username, otp,namo,phon) {
         // Send mail with defined transport object
           await axios.get('https://app.crmsoftware.ae/api/message.php', {
             params: {
-                agent: '971562559270',
+                agent: 'xxxxxxxxx',
                 client: `${phon}`,
                 country: 'AE',
                 message: `Hi there *${namo}*, Your ${companiname} Portal Login OTP is *${otp}* please dont share this OTP with anyone`
